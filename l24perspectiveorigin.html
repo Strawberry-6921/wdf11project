@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Perspective Origin</title>
+	<style type="text/css">
+		body{
+			height: 100vh;
+			display: grid;
+			place-items: center;
+		}
+
+		.container{
+			perspective: 500px;
+							/*	default		*/
+/*			perspective-origin: center;*/
+/*			perspective-origin: top;*/
+/*			perspective-origin: bottom;*/
+/*			perspective-origin: left;*/
+/*			perspective-origin: right;*/
+/*			perspective-origin: left top;*/
+/*			perspective-origin: left bottom;*/
+/*			perspective-origin: right top;*/
+/*			perspective-origin: right bottom;*/
+							/*  left center */
+/*			perspective-origin: 0;*/
+							/*  left top */
+/*			perspective-origin: 0 0;*/
+							/*  left bottom */
+/*			perspective-origin: 0 bottom;*/
+
+							/*  right bottom */
+/*			perspective-origin: 100% bottom;*/
+
+							/*  right bottom */
+/*			perspective-origin: 100% top;*/
+
+							/*  right bottom */
+/*			perspective-origin: 100% bottom;*/
+
+							/*  center center */
+			perspective-origin: 50% 50%;
+
+		}
+
+		.container img{
+			width: 300px;
+			transition: 2s linear;
+
+		}
+
+		.container img:hover{
+			transform: translateZ(300px);
+			/*transform: translateZ(-1000px);zoom out*/
+
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="./img/merlecollie.jpg" alt="dog" />
+	</div>
+</body>
+</html>

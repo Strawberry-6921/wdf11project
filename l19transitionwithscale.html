@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transition with Rotate</title>
+	<style type="text/css">
+		.container{
+			width: 1200px;
+			background: grey;
+			margin: 3rem;
+		}
+
+		.container .square{
+			width: 150px;
+			height: 50px;
+			background: saddlebrown;
+			color: #fff;
+			font-size: 20px;
+
+			text-align: center;
+			line-height: 50px;
+
+			border-radius: 4px;
+
+			transition-property: transform;
+			transition-duration: 2s;
+			transition-timing-function: linear;
+		}
+
+	
+		#scale:hover{
+/*			scale(angle xy)*/
+			transform: scale(1);
+			transform: scale(3);
+			
+		}
+	
+		
+		#scalexy:hover{
+/*			scale(angle xy)*/
+			transform: scale(1,2);
+			transform: scale(2,1);
+			transform: scale(4,5);
+			
+		}
+
+		
+		#scalex:hover{
+/*			scale(angle xy)*/
+			transform: scaleX(3);
+			transform: scaleX(2);
+			transform: scaleX(5);
+			
+		}
+
+
+		#scaley:hover{
+/*			scale(angle xy)*/
+			transform: scaleY(2);
+			transform: scaleY(3);
+			transform: scaleY(6);
+			
+		}
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="scale" class="square">DIV 1 XY</div>
+	</div>
+
+	<div class="container">
+		<div id="scalexy" class="square">DIV 2 X,Y</div>
+	</div>
+
+	<div class="container">
+		<div id="scalex" class="square">DIV 3 X</div>
+	</div>
+
+	<div class="container">
+		<div id="scaley" class="square">DIV 3 Y</div>
+	</div>
+		
+
+</body>
+</html>

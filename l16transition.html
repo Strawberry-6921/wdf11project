@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transistion</title>
+	<style type="text/css">
+		.div1{
+			width: 300px;
+			height: 100px;
+			background-color: saddlebrown;
+			color: #fff;
+			font-size: 20px;
+
+			/*text-align: center;
+			line-height: 100px;*/
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+/*			short hand*/
+/*			transition: background 5s;*/
+/*			transition: background 5000ms;*/
+
+			transition-property: background;
+			transition-duration: 3s;
+			transition-duration: 0.3s;
+			transition-duration: .5s;
+		}
+
+		.div1:hover{
+			background: darkgreen;
+		}
+
+		.div2{
+			width: 300px;
+			height: 100px;
+			background-color: saddlebrown;
+			color: #fff;
+			font-size: 20px;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+/*			transition: all 2s;*/
+/*			transition: all 2s 5s;*/
+
+			/*transition-property: all;
+			transition-duration: 2s;
+			transition-delay: 5s;*/
+
+/*			transition-property: width;*/
+/*			transition-property: width,background;*/
+/*			transition-property: width,background,color;*/
+
+
+/*			transition-duration: 2s;*/
+/*			transition-delay: 3s;*/
+			
+/*			transition: width 2s;*/
+			transition: width 2s, background 4s, color 7s;
+
+
+
+		}
+
+		.div2:hover{
+			width: 400px;
+			background: blue;
+			color: #000;
+		}
+
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="div1">
+		CSS Transition DIV 1 
+	</div>
+	<hr/>
+
+	<div class="div2">
+		CSS Transition DIV 2 
+	</div>
+	<hr/>
+</body>
+</html>

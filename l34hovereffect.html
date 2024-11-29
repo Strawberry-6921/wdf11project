@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hover Effect</title>
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                height: 100vh;
+                background-color: #000;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            button{
+                background: none;
+                font-size: 30px;
+                border: 4px solid #fff;
+                color: #fff;
+                padding: 40px 80px;
+                position: relative;
+    
+                overflow: hidden;
+                transition: color 1s linear;
+                
+            }
+
+            button::before{
+                content: '';
+                width: 100%;
+                height: 30%;
+                background: #fff;
+                color: #000;
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                border-radius: 0 0 100% 0;
+                transition: all 1s linear;
+             
+                
+                z-index: -1;
+
+            }
+
+           button:hover::before{
+                height: 100%;
+                border-radius: 0 0 0 100%;
+
+
+           }
+
+           button:hover{
+            color: #000;
+            font-family: sans-serif;
+           }
+
+
+           
+
+            
+            
+        </style>
+    </head>
+    <body>
+
+        <button type="button"> Hover Me </button>
+
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button Effect</title>
+        
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                height: 100vh;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .btn{
+                background: linear-gradient(200deg,skyblue,pink);
+                font-size: 40px;
+                border: none;
+                border-radius: 40px;
+                padding: 20px;
+
+                cursor: pointer;
+                position: relative;
+            }
+
+            .btn::after{
+                content: "10% OFF";
+
+                background-color: orange;
+                border-radius: 25px;
+                padding: 5px;
+                font-size: 16px;
+
+                position: absolute;
+                right: 10px;
+                top: -10px;
+            }
+
+            .btn:hover::after{
+                background-color: saddlebrown;
+                color: #fff;
+            }
+          
+
+        
+          
+
+
+            
+           
+
+  
+            
+           
+
+            
+        </style>
+    </head>
+    <body>
+        <button type="button" class="btn download-btn">Add To Card</button>
+
+
+
+    </body>
+</html>

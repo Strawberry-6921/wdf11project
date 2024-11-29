@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter</title>
+	<style type="text/css">
+		body{
+			counter-reset: idx;
+		}
+
+		h2::before{
+			counter-increment: idx;
+/*			content: counter(idx);*/
+			content: "section" counter(idx) " : ";
+		}
+
+		/* counter-increment: idx(idx က ကိုယ်ကြိုက်တာရေးလို့ရ); သုံးမယ်ဆိုရင် သူ၏ parent( parent က ပထမတစ်ခါသုံးပြီးသားဆိုရင် သူ့အပေါ်မာရှိနေတဲ့ tag တစ်ခုခုကို ခေါ်သုံးလို့ရ) မှာ counter-reset ကို idx ပေးထားရမယ် ပြီးရင် content မာ counter ကို ပြန်ခေါ်ပြီးသုံး */
+
+		h2{
+			counter-reset: subidx;
+		}
+
+		h3::before{
+			counter-increment: subidx;
+			content: "lesson" counter(idx) " . " counter(subidx) " : ";
+		}
+	</style>
+</head>
+<body>
+	<h1>DLT lessons</h1>
+
+	<h2>Web Development Foundation</h2>
+	<h3>html</h3>
+	<h3>css</h3>
+	<h3>javascript</h3>
+	<h3>bootstrap</h3>
+	<h3>github</h3>
+
+
+
+	<h2>CSS Class</h2>
+	<h3>css intermediate</h3>
+	<h3>bootstrap</h3>
+	<h3>tailwind css</h3>
+
+	<h2>javascript Class</h2>
+	<h3>jquery</h3>
+	<h3>javascript es6</h3>
+	<h3>react js</h3>
+	<h3>node js</h3>
+
+	<h2>Database Class</h2>
+	<h3>mysql</h3>
+	<h3>mongo db</h3>
+	
+	<h2>PHP Class</h2>
+	<h3>php oop</h3>
+	<h3>laravel </h3>
+</body>
+</html>

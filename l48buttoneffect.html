@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button Effect</title>
+        
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                height: 100vh;
+                background-color: #10887e;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .btn{
+                width: 350px;
+                height: 65px;
+                background: #000;
+        
+                color: #fff;
+                border: none;
+
+                cursor: pointer;
+             
+
+                position: relative;
+                overflow: hidden;
+            }
+
+            .btn span{
+                color: #fff;
+                font-size: 20px;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+
+                /* Note!!! If you want to use transform !!! that ele must be block element */
+                display: block;
+                transform: scaleX(0.7);
+                transform-origin: left;
+            }
+
+            .btn::before{
+                content: "";
+
+                width: 100%;
+                height: 40%;
+                background: #fff;
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                transform: translateX(-100%);
+                transition: transform 0.5s ease-in-out;
+          
+            }
+
+            .btn:hover::before{
+                transform: translateX(90%) skew(45deg);
+            }
+
+            .btn::after{
+                content: "";
+
+                width: 100%;
+                height: 40%;
+                background: #fff;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+
+                transform: translateX(100%);
+                transition: transform 0.5s ease-in-out;
+          
+            }
+
+            .btn:hover::after{
+                transform: translateX(-90%) skew(45deg);
+            }
+
+            .btn em{
+                width: 100%;
+                height: 3px;
+                background-color: #fff;
+                
+                position: absolute;
+                left: 0;
+                top: 50%;
+
+                transform: scale(0.25);
+                transform-origin: right;
+                transition: left .3s ease-in;
+            }
+
+            .btn:hover span{
+                color: yellow;
+            }
+
+            .btn:hover em{
+                left: 20%;
+            }
+
+
+            
+           
+
+  
+            
+           
+
+            
+        </style>
+    </head>
+    <body>
+                                                                    <!-- Empharise Element -->
+        <button type="button" class="btn download-btn"><span>Hover Me</span><em></em></button>
+
+
+
+    </body>
+</html>

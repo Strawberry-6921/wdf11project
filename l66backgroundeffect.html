@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Background Effect</title>
+        
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                height: 100vh;
+                background-color: #000;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                padding: 0;
+                margin: 0;
+
+                overflow: hidden;
+            }
+
+            .container{
+
+               /* width: 500px;
+                height: 500px;*/
+
+                width: 100%;
+                height: 100%; 
+                
+            }
+
+            .heart{
+                width: 100px;
+                height: 100px;
+                background: red;
+
+                position: relative;
+
+                transform: rotate(45deg);
+
+                opacity: 0;
+
+                animation: myani 5s linear infinite;
+
+            }
+
+            .heart::before{
+                content: "";
+
+                width: 100%;
+                height: 100%;
+                background-color: red;
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                transform: translateY(-50%);
+            }
+
+            .heart::after{
+                content: "";
+
+                width: 100%;
+                height: 100%;
+                background-color: red;
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                transform: translateX(-50%);
+            }
+
+
+           
+
+            @keyframes myani{
+                from{
+                    opacity: 1;
+                    top: 0;
+                }to{
+                    opacity: 0;
+                    top: 100%;
+                }
+            }
+
+            .heart:nth-of-type(1){
+                width: 10px;
+                height: 10px;
+                left: 7%;
+                animation-delay: 1s;
+            }
+
+            .heart:nth-of-type(2){
+                width: 90px;
+                height: 90px;
+                left: 20%;
+                animation-delay: 3s;
+            }
+            .heart:nth-of-type(3){
+                width: 20px;
+                height: 20px;
+                left: 65%;
+                animation-delay: 6s;
+            }
+            .heart:nth-of-type(4){
+                width: 30px;
+                height: 30px;
+                left: 45%;
+                animation-delay: 8s;
+            }
+            .heart:nth-of-type(5){
+                width: 60px;
+                height: 60px;
+                left: 75%;
+                animation-delay: 4s;
+            }
+            .heart:nth-of-type(6){
+                width: 35px;
+                height: 35px;
+                left: 80%;
+                animation-delay: 3s;
+            }
+            .heart:nth-of-type(7){
+                width: 80px;
+                height: 80px;
+                left: 50%;
+                animation-delay: 1s;
+            }
+            .heart:nth-of-type(8){
+                width: 50px;
+                height: 50px;
+                left: 85%;
+                animation-delay: 10s;
+            }
+            .heart:nth-of-type(9){
+                width: 70px;
+                height: 70px;
+                left: 40%;
+                animation-delay: 6s;
+            }
+            .heart:nth-of-type(10){
+                width: 50px;
+                height: 50px;
+                left: 90%;
+                animation-delay: 7s;
+            }
+         
+        
+            
+        </style>
+    </head>
+    <body>
+       <div class="container">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+       </div>
+
+
+    </body>
+</html>

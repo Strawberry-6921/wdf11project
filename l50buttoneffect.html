@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button Effect</title>
+        
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                height: 100vh;
+                background-color: #333;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .btn{
+                width: 220px;
+                height: 80px;
+                background: darkred;
+                color: #fff;
+                font-size: 27px;
+                text-transform: uppercase;
+                border: none;
+                border-radius: 50px;
+
+                cursor: pointer;
+                position: relative;
+            }
+
+    
+            .btn::before,.btn::after{
+                content: "";
+
+                width: 100%;
+                height: 100%;
+                background: mediumvioletred;
+                border-radius: inherit;
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                transition: all .5s ease-out;
+
+                z-index: -1;
+            }
+
+            .btn:hover::before{
+                left: -25px;
+                top: -10px;
+
+                opacity: 0;
+                transform: scale(1.2);
+            }
+
+            .btn:hover::after{
+                left: 25px;
+                top: 10px;
+
+                opacity: 0;
+                transform: scale(1.2);
+
+                transition-delay: .3s;
+            }
+
+            .btn:hover{
+                box-shadow: -10px 10px 5px rgb(0,0,0,0.7);
+                transition-delay: .8s;
+            } 
+       
+           
+          
+
+        
+          
+
+
+            
+           
+
+  
+            
+           
+
+            
+        </style>
+    </head>
+    <body>
+        <button type="button" class="btn download-btn">Hover Me</button>
+
+
+
+    </body>
+</html>

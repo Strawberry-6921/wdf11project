@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button Effect</title>
+        
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                height: 100vh;
+                background-color: #000;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .btn{
+                width: 300px;
+                height: 80px;
+                background: #111;
+                color: #fff;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+
+                
+                position: relative;
+            }
+
+            .btn::before{
+                content: "";
+
+                width: calc(100% + 4px);
+                height: calc(100% + 4px);
+
+                background: linear-gradient(70deg,brown,green,yellow,red,pink,yellow,green,brown);
+
+                border-radius:  10px;
+                background-size:    400px;
+               
+
+                position: absolute;
+                right: -2px;
+                top: -2px;
+
+                opacity:    0;
+
+                z-index: -1;
+
+                transition: opacity .3s linear;
+
+            }
+
+            .btn:hover::before{
+                opacity: 1;
+
+                animation:  lighting 5s linear infinite    ;
+
+            }
+
+            .btn:active{
+                background: transparent ;
+                color:  #000;
+            }
+
+            @keyframes lighting{
+                0%{
+                    background-position: 0;
+                }
+
+                50%{
+                    background-position: 500% 0;
+                }
+
+                100%{
+                     background-position: 0 0;
+                }
+            }
+
+            
+          
+
+        
+          
+
+
+            
+           
+
+  
+            
+           
+
+            
+        </style>
+    </head>
+    <body>
+        <button type="button" class="btn download-btn"> Hover Me and then Press Me!!</button>
+
+
+
+    </body>
+</html>

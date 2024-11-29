@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button Effect</title>
+        
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                height: 100vh;
+                background-color: #000;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .btn{
+                width: 480px;
+                height: 100px;
+                background: steelblue;
+                color: #fff;
+                font-size: 2.5rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                border: none;
+                border-radius: 20px;
+                cursor: pointer;
+
+               
+            }
+
+        
+
+            .btn:hover{
+                color: #000;
+
+            }
+
+            .btn:hover{
+                background-image: linear-gradient(
+                    150.5deg,
+                    transparent,
+                    green,
+                    transparent,
+                    green,
+                    transparent,
+                    green,
+                    transparent,
+                    green,
+                    transparent,
+                    green
+
+                );
+                background-size: 30%;
+
+                animation: myani 5s linear infinite;
+
+            }
+
+            @keyframes myani{
+                from{
+                    background-position: 0 0;
+                }to{
+                    background-position: 400px 0;
+                }
+            }
+
+         
+            
+
+        
+          
+
+
+            
+           
+
+  
+            
+           
+
+            
+        </style>
+    </head>
+    <body>
+        <button type="button" class="btn download-btn">Hover Me</button>
+
+
+
+    </body>
+</html>

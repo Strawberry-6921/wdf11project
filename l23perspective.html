@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Perspective</title>
+	<style type="text/css">
+		body{
+			height: 100vh;
+			display: grid;
+			place-items: center;
+		}
+
+/*	 	 Zoom in/out ကို  3D view နဲ့ကြည့်ရအောင်လုပ်ခြင်း perspective ကို imagae ရဲ့ parent မှား ပေးရမယ်
+		 perspective မပါရင် translate Z က အလုပ်မလုပ်နိုင်ဘူး	*/
+		.container{
+			perspective: 500px;
+		}
+
+		.container img{
+			width: 300px;
+			transition: 2s linear;
+
+		}
+
+		.container img:hover{
+/*			transform: translateZ(300px); zoom in*/
+			transform: translateZ(-1000px);/*zoom out*/
+
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="./img/cutedog.jpg" alt="dog" />
+	</div>
+</body>
+</html>

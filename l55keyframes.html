@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Key Frames</title>
+        
+
+        
+        <style type="text/css">
+            
+            body{
+                padding: 0;
+                margin: 0;
+
+            }
+
+            .box{
+                width: 150px;
+                height: 150px;
+                background-color: steelblue;
+
+                animation-name: myani;
+                animation-duration: 3s;
+            }
+
+            @keyframes myani{
+
+
+/*              from{
+                    transform: translate(0px);
+                }
+                to{
+                    transform: translate(1000px);
+                }
+                from and to
+
+*/
+/*              0%{
+                    transform: translate(0px);
+                }
+                100%{
+                    transform: translate(1000px);
+                }
+              0 and 100 
+
+*/
+
+/*              100%{
+                    transform: translate(1000px);
+                }
+                
+                If you write only 100% ,animation can run 
+*/
+             
+                to{
+                    transform: translate(1000px);
+                }
+
+                /*If you write only "to" ,animation can run */
+            }
+
+     
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+
+    </body>
+</html>
