@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Object Literals (JavaScript Object)</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		let student = {
+			firstname: "Honey",
+			middlename: "Nway",
+			lastname: "Oo",
+			age: 20
+		};
+
+		console.log(student);
+		console.info(student);
+		console.table(student);
+		console.log(typeof student); // object
+
+		console.log(student.firstname);// Honey
+		console.log(student.middlename);// Nway
+		console.log(student.lastname); // Oo
+		console.log(student.age);// 20
+
+		console.log(typeof student.firstname); // string
+		console.log(typeof student.age); // number
+
+
+
+		const persons = {
+			firstname: "Kyaw Kyaw",
+			lastname : "Htay Lwin",
+			age : 43,
+			single : false ,
+			email: "kyawkyaw@gmail.com",
+			address: {
+				street :"62st",
+				twomship:"alone",
+
+			},
+			howntown:{
+			city: "Yangon"},
+
+			hobbies: ["golf","car","bicycle","smoking"]
+		}
+
+		console.log(persons); 
+		console.table(persons);
+
+		console.log(persons.firstname);// kyaw kyaw
+		console.log(persons.age);
+		console.log(persons.single);
+
+		console.log(persons.howntown);
+		console.log(persons.howntown.city);
+
+		console.log(persons.address);
+		console.log(persons.address.street);
+		console.log(persons.address.twomship);
+
+		console.log(persons.hobbies[2]);
+		console.log(persons.hobbies[4-1]);
+		console.log(persons.hobbies.length);
+		console.log(persons.hobbies[persons.hobbies.length-1]);
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

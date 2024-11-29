@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Method</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+            let arrcolors = ["red","green","blue","white","black","pink"];
+
+            console.log(arrcolors); //(6) ['red', 'green', 'blue', 'white', 'black', 'pink']
+            console.log(arrcolors.length); //6
+            console.log(arrcolors[3]);// white
+
+
+            // indexOf(value)
+            // case sensistive 
+
+            console.log(arrcolors.indexOf('black')); // 4
+            
+            console.log(arrcolors.indexOf('Black')); //-1
+            
+            console.log(arrcolors.indexOf('orange')); // -1
+
+
+
+            // Array.isArray(array)
+            const name = "aung aung";
+            console.log(Array.isArray(name)); // false
+            console.log(Array.isArray(arrcolors)); // true
+
+
+
+            // join('delimitor') join("mychoice can use")
+            console.log(String(arrcolors)); //red,green,blue,white,black,pink
+
+            console.log(arrcolors.toString());// red,green,blue,white,black,pink
+
+            console.log(arrcolors.join());//red,green,blue,white,black,pink
+
+            console.log(arrcolors.join(""));//redgreenbluewhiteblackpink
+
+            console.log(arrcolors.join(" "));// red green blue white black pink
+
+            console.log(arrcolors.join("-")); //red-green-blue-white-black-pink
+
+
+
+            // const က တစ်ခုချင်းဆို overwrite လုပ်နိုင်တယ် တစ်ခုလုံးကိုတော့မရဘူး
+            const candies = ["red","green","blue","white","black"];
+                candies[5] = "pink";
+                candies[1] = "skyblue";
+            console.log(candies);// ['red', 'skyblue', 'blue', 'white', 'black', 'pink', 'orange', 'gold', 'silver', 'gray']
+
+            console.log(candies.length); //6
+
+            // push(value) Note:: Add new value to array (adding to the end)
+
+            candies.push("orange");
+            candies.push("gold");
+            candies.push("silver", "gray");
+
+            console.log(candies);
+
+            console.log(candies.length); //10
+
+
+            // unshifr(value) Note:: Adding to the front
+
+            candies.unshift('tomato');
+            candies.unshift('brown');
+            candies.unshift('violet',"sanddlebrown");
+
+
+            console.log(candies);// ['violet', 'sanddlebrown', 'brown', 'tomato', 'red', 'skyblue', 'blue', 'white', 'black', 'pink', 'orange', 'gold', 'silver', 'gray']
+
+            console.log(candies.length); //14
+
+
+            // shift() Note:: Remove value & index number (take of from front)
+            candies.shift();
+            console.log(candies);//['sanddlebrown', 'brown', 'tomato', 'red', 'skyblue', 'blue', 'white', 'black', 'pink', 'orange', 'gold', 'silver', 'gray']
+            console.log(candies.length); // 13
+
+            // pop()Note:: Remove value & index number (take of from end)
+
+            candies.pop();
+            console.log(candies);//['sanddlebrown', 'brown', 'tomato', 'red', 'skyblue', 'blue', 'white', 'black', 'pink', 'orange', 'gold', 'silver']
+            console.log(candies.length); // 12
+
+
+            // delete() Remove only value
+            delete candies[1];
+            delete candies[5];
+
+            console.log(candies); //['sanddlebrown', empty, 'tomato', 'red', 'skyblue', empty, 'white', 'black', 'pink', 'orange', 'gold', 'silver']
+            console.log(candies.length); // 12
+
+
+
+            // splice(index,length);
+
+            const paints = candies.splice(0,5) ; 
+            console.log(paints); // ['sanddlebrown', empty, 'tomato', 'red', 'skyblue']
+
+
+            // concat()
+            const arr1 = ["aung aung","naung naung","nyi nyi"];
+            const arr2 = ["nu nu","yu yu","su su"];
+            const arr3 = [10,20];
+            console.log(arr1+arr2); // aung aung,naung naung,nyi nyinu nu,yu yu,su su
+            console.log(arr1.concat(arr2));//(6) ['aung aung', 'naung naung', 'nyi nyi', 'nu nu', 'yu yu', 'su su']
+            console.log(arr3.concat(arr2));//(5) [10, 20, 'nu nu', 'yu yu', 'su su']
+
+
+            // sort()  a to z
+            const combinearrs = arr1.concat(arr2);
+            console.log(combinearrs);
+            console.log(combinearrs[1]);
+            console.log(combinearrs[3]);
+
+            console.log(combinearrs.sort()); //(6) ['aung aung', 'naung naung', 'nu nu', 'nyi nyi', 'su su', 'yu yu']
+
+            console.log(combinearrs[0]); // aung aung
+            console.log(combinearrs[2]); // nu nu
+
+
+            // reverse() Note :: reverse can't set z to a . it is just reverse
+            console.log(combinearrs.reverse()); //(6) ['yu yu', 'su su', 'nyi nyi', 'nu nu', 'naung naung', 'aung aung']
+
+            // num isn't sorting with sort(), it's sorting 1111>2222>3333
+            
+            const num = [10,200,30,50,400,80,2,9,4,7,6,100,55,76,80,16]
+            console.log(num.sort()); // (16) [10, 100, 16, 2, 200, 30, 4, 400, 50, 55, 6, 7, 76, 80, 80, 9]
+            console.log(num.reverse());//(16) [9, 80, 80, 76, 7, 6, 55, 50, 400, 4, 30, 200, 2, 16, 100, 10]
+
+
+            // callback function
+
+            console.log(num.sort(function(a,b){
+                return a-b; // 0 to 1 2 3 .......
+            })
+
+            );
+
+            console.log(num.sort(function(x,y){
+                return y-x; // ......3 2 1 0
+            })
+
+            );
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+
+    </body>
+</html>

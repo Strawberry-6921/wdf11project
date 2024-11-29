@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Type Conversion</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// String ( character array for js )
+		let val;
+
+		val = "aung aung";
+		console.log(val); // aung aung
+		console.log(typeof val); // string
+		console.log(val.length); // 9
+
+		// Number to String
+		// 4 way to change
+		// val = 20;
+		// val = "20";
+		// val = '20';
+		// val = `20`;
+		val = String(20);
+		console.log(val); // 20
+		console.log(typeof val); // number
+		console.log(val.length); // 2
+
+
+		// Boolean to String
+
+		// 4 way to change
+		// val = true;
+		// val = "true";
+		// val = 'true';
+		// val = `true`;
+		val = String(true);
+		console.log(val); // true
+		console.log(typeof val); // string
+		console.log(val.length); // 4
+
+
+		// Date to String
+
+		val = "new Date()"; // new Date()
+		val = String(new Date());
+		console.log(val); // Tue Sep 24 2024 20:16:18 GMT+0630 (Myanmar Time)
+
+		console.log(typeof val); // string
+		console.log(val.length); // 48
+
+
+
+		// Array to String
+
+		val = '[1,2,3,4,5]'; // [1,2,3,4,5]
+		val = String([1,2,3,4,5]);
+		console.log(val); // 1,2,3,4,5
+
+		console.log(typeof val); // string
+		console.log(val.length); // 9
+
+		//--------------------------------------------------------------
+
+
+		// String to number
+
+		// val = Number("aung aung"); NaN= Not a Number
+
+		val = "20";
+		//val = Number(val);
+		val = 300 + +val; // + ကို val နဲ့ကပ်ရေးရမယ် သူက type change ပေးတာ
+		val = +"20"; // အပေါ်နဲ့တူတူပဲ
+
+		console.log(val); // 320
+
+
+		console.log(typeof val); // number 
+		console.log(val.length); //  undefined
+
+
+		//val =	prompt("Enter First Number")
+		//val = Number(prompt("Enter First Number"));
+		//val =	+prompt("Enter First Number")
+		console.log(val); // 300
+		console.log(typeof val); // string
+
+
+		// NaN = Not a Number
+		 val = Number("aung aung");
+		 val = +"aung aung";
+		 val = Number([1,2,3,4,5]); 
+
+		 val = 10 +"33.34"; // 1033.34
+		 val = 10 + +"33.34"; //43.34
+
+		console.log(val); 
+		console.log(typeof val); // number
+
+
+
+
+		
+		val = 123.456789;
+
+		console.log(val); // 123.456789
+		console.log(val.toFixed(3)); // 123.457
+		console.log(typeof val); // number
+
+
+		
+		val = 123;
+
+		console.log(val); // 123
+		console.log(val.toFixed(2)); // 123.00
+		console.log(typeof val); // number
+
+
+		val = "50.789"; // error
+		//val =Number("50.789"); // 50.79
+		//val = parseFloat(val); // 50.79 for decimal number
+		val = parseInt(val); //50 for integer number                                                                                              
+
+		console.log(val); 
+		console.log(val.toFixed(2)); // 50.79
+		console.log(typeof val); // number
+
+
+		// Boolean to Number
+		val = true ;
+		val = Number(val); //1
+		val = +false; //0
+
+		console.log(val);
+		console.log(val.toFixed(2)); // 0.00
+		console.log(typeof val); // number
+
+
+//--------------------------------------------------------------
+
+		// String  to Array
+		val = "honey nway oo" ;
+		val = Array.from(val);
+		
+
+		console.log(val);
+		console.log(typeof val); // object
+		console.log(val.length); //13
+
+
+		// Note: number,boolean can't convert to array
+		// val = 50;
+		// val = true;
+		// val = new Date();
+		// val ={
+		// 	music: "rock",
+		// 	sport: "ball"
+		// };
+		// val = Array.from(val);
+		
+
+		// console.log(val); empty
+		// console.log(typeof val); // object
+		// console.log(val.length); // 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

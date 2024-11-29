@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Type</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		// String
+		const name = "Su Su";
+		console.log(name);
+		console.warn(typeof (name));
+		console.error(typeof name);
+
+		// Number
+		const age = 25;
+		console.log(age);
+		console.warn(typeof (age));
+		console.error(typeof age);
+
+		// Boolean (true,false)
+		const hascar = false;
+		console.log(hascar);
+		console.warn(typeof (hascar));
+		console.error(typeof hascar);
+
+		// Object
+		var date = new Date();
+		console.log(date);
+		console.warn(typeof (date));
+		console.error(typeof date);
+
+		// Object (Javascript Object)
+		// key:value
+
+		const address = {
+			no:"No.123",
+			street: "st btw 75x76",
+			city: "Mandalay",
+			country:"Myanmar"
+		};
+
+		console.log(address);
+		console.log(typeof address);
+		console.log(address.no);  // No.123
+		console.log(address.country); // Myanmar
+
+		// Array []
+
+		const hobbies = ["series","music","play"];
+		console.log(hobbies);
+		console.log(typeof hobbies); // Object
+		console.log(hobbies[0]); //series
+		console.log(hobbies[2]); // play
+
+		let test;
+		console.log(test);
+		console.log(typeof test); // undefined ဘာမှကိုတန်ဖိုးမရှိတာ
+
+		let nickname = ""; // [] / {} <<<= empty
+		console.log(nickname); // empty
+		console.log(typeof nickname); // string ဘာမှမရှိတဲ့တန်ဖိုးကိုသတ်မှတ်ထားတယ်
+
+
+		let car = null;
+		console.log(car); // null တန်ဖိုးဘာမှမရှိတာကိုသတ်မှတ်ထားတာ
+		console.log(typeof car); //object
+
+
+
+
+	</script>
+</body>
+</html>

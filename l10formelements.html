@@ -1,0 +1,177 @@
+<html>
+<head>
+	<title>Form Element </title>
+</head>
+<body>
+	<h3>Form Element</h3>
+
+
+	<fieldset>
+		<legend>This is sample form</legend>
+
+	<form action="" method="POST" enctype="multipart/form-data">
+
+
+		<label for="firstname">First Name</label>
+		<input type="text" name="firstname" id="firstname" class="" maxlength="10" minlength="5" placeholder="Enter your firstname" autocomplete="off" value="koko" readonly autofocus />
+		<br/><br/>
+		<label for="lastname">Last Name</label>
+		<input type="text" name="lastname"id="lastname" placeholder="Enter your lastname" maxlength="10" minlength="5" value="koko" disabled autocomplete="off" />
+
+		<br/><br/>
+		<label for="age">Age</label>
+		<input type="number" name="age"id="age" min="18" max="45" placeholder="Enter your age"required autocomplete="off"/>
+		<br/><br/>
+		<label for="passward">Passward</label>
+		<input type="passward" name="passward" id="passward"placeholder="Enter your passward" maxlength="10" minlength="5" autocomplete="off"required />
+		<br/><br/>
+
+		<label>Gender</label>
+
+		<input type="radio" name="gender" id="genderm" value="0" />
+		<label for="genderm">Male</label>
+
+		<input type="radio" name="gender" id="genderf" value="1" /><label for="genderf">Female</label>
+		<input type="radio" name="gender" id="gendero" value="2" /><label for="gendero">Other</label>
+
+		<br><br>
+
+		<label>Choose your Fav Fruit</label>
+		<input type="checkbox" name="fruit" id="fruitsb" class="" value="0" />
+		<label for="fruitsb">strawberry</label>
+
+		<input type="checkbox" name="fruit" id="fruitap" class="" value="1" />
+		<label for="fruitap">apple</label>
+
+		<input type="checkbox" name="fruit" id="fruitpa" class="" value="2" />
+		<label for="fruitpa">pineapple</label>
+
+		<input type="checkbox" name="fruit" id="fruitbn" class=""  value="3" />
+		<label for="fruitbn">banana</label>
+
+<br><br>
+		<label for="dob">DOB</label>
+		<input type="date" name="dob" id="dob" class="" />	
+		<br><br>
+
+		<label for="bookingtime">
+		Booking Time
+		</label>
+		<input type="time" name="bookingtime" id="bookingtime" class="" />
+
+<br><br>
+
+		<label for="appointment">
+		Appointment
+		</label>
+		<input type="datetime-local" name="appointment" id="appointment" class="" />
+<br><br>
+		<label for="vol">Volume</label>
+		<input type="range" name="vol" id="vol" class="" min="0" max="100" value="0" step="20" />
+
+<br><br>
+<label for="nrc">NRC</label>
+	<input type="file" name="nrc" id="nrc" class="" accept="image/jpg*" capture="environment" multiple />
+	
+<br><br>
+
+<label for="bio">Bio</label>
+<textarea name="bio" id="bio" class="" rows="10" spellcheck="false" placeholder="Enter your bio"></textarea>
+
+
+		<br><br>
+
+
+		<label for="country">Citizen</label>
+		<select name="country" id="country">
+			<option selected disabled>Choose a country</option>
+			<option value="0">Myanmar</option>
+			<option value="1">Thailand</option>
+			<option value="2">Philipine</option>
+			<option value="3">Singapore</option>
+			<option value="4">China</option>
+		</select>
+		
+		<br><br>
+		<label for="role">Role</label>
+		<select name="role" id="role" class="">
+			<option selected disabled>Choose a role</option>
+			<option value="1">Manager</option>
+			<option value="2">Editor</option>
+			<option value="3">Supervisor</option>
+			<option value="4">Sales</option>
+		</select>
+
+		<br><br>
+		<label for="role">Role</label>
+		<select name="role[]" id="role" class="" multiple>
+			
+			<option value="1">Manager</option>
+			<option value="2">Editor</option>
+			<option value="3">Supervisor</option>
+			<option value="4">Sales</option>
+		</select>
+
+
+		
+	
+<br><br>
+<input type="time" name="test" class="" hidden/>
+<input type="hidden" name="test" class="" />
+<!-- နောက်ကွယ်ကနေအလုပ်လုပ်ပေးခြင်း -->
+<br><br>
+<input type="reset" name="cancels" id="cancels" class="" value="cancels" />
+<input type="button" name="login" id="login" class="" value="Login"/>
+
+<input type="submit" name="signup" id="signup" class=""/>
+
+<!-- form clear လုပ်ဖို့ type reset ကိုသုံး -->
+<button type="reset" name="cancel" id="cancel" class="">Cancel</button>
+<!--form register တေအတွက် type button ကိုသုံး (my feature တေကို ဖန်တီးဖို့သုံး) -->
+<button type="button" name="register" id="register" class="">Register</button>
+
+<!-- form ကို database ရောက်အောင် ပို့ပေးဖို့သုံး type submit -->
+<button type="submit" name="signup" id="signup" class="">Signup</button>
+
+	</form>
+</form>
+</fieldset>
+
+<!-- radio /checkbox mr required maya required ka standlone altribute-->
+		<!-- required ko form mapyaesone pl submit လုပ်မရအောင်လုပ်တာ -->
+		<!-- restrict လုပ်ထားတာတေဆိုရင် signup/ submit လုပ်ရာမာပေါ်လာပြလိမ့်မယ် -->
+		<!-- email text& name text က မတူဘူး -->
+		<!-- disabled / readonly user ko ma thone say chin tr. readonly ka htin htin shar shar paw. paw say chin tr shi yin value thwar pay lot ya -->
+<!-- {Tag
+	Self closing Tag
+	Element
+	attributes}
+	-stand  alone attributes
+	{.selected
+	.required
+	.autofocus
+	.checked
+	.readonly
+	.multiple
+	.hidden
+	.disabled} -->
+<!-- type="text/number/passward/radio/checkbox/dob/time/datetime-local/range/file/"{file မှာ accept နဲ့ capture /multiple ပါသေး. accept="images" capture="environment" } { radio က ၂ ခုထဲက ၁ ခုပဲ ရွေးလို့ရအောင်ရေးတာ} { checkbox က multiple အများကြီးရွေးလို့ရအောင်ရေးတာ} -->
+
+<!-- input ထဲမှာ type/name/id/class/placeholder<ထည့်လဲရမထည့်လဲရ>/autocomplete/autofocus/ click နှိပ်ရေးတာဆိုရင် value တန်ဖိုး ထည့်ကိုထည့်ပေးရမယ်,on ground မာ value ကို number တေသာထားသည် -->
+	
+
+<!-- bio <label for="bio">Bio</label>
+	<textarea name="bio" id="bio" class="" rows="20" spellcheck="true" placeholder="enter your bio"></textarea> 
+-->
+	
+
+	<!-- <label for="">
+			<select name="" id="">
+				<option selected disabled >Choose.....</option>
+				<option value="">...........</option>
+			</select>
+		</label> -->
+<!-- selected disabled သည် ရွေးပြီးသား ရွေးလို့ မရအောင်ဖန်တီးခြင်း -->
+
+</body>
+</html>

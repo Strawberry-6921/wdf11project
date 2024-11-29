@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Generator Function</title>
+    
+
+    </head>
+    <body>
+        
+
+
+    
+
+       
+
+
+
+
+        <script type="text/javascript">
+
+            // Global Scope
+
+            const name = "aung aung";
+                //name = "kyaw kyaw" ;// error
+                //const name = "su su"; // error
+            console.log(name);
+            
+
+
+            let city = " Mandalay";
+                city = "Yangon";
+                //let city = "Bago"; //error
+            console.log(city);
+
+
+            var country = "Myanmar";
+                country ="Thailand";
+            var country = "Srilanka";
+            console.log(country);
+
+// -----------------------------------------------------------------------------------
+
+            // Block Scope
+            //Loop
+
+            // for(const x = 0 ; x < 10 ; x++){
+            //     console.log(x); //error
+            // }
+
+
+            // for(let b = 0 ; b < 10 ; b++){
+            //         console.log(b); //error
+            //  }
+
+            //  console.log("b outside value = ",b) //error
+
+             for(var d = 0 ; d < 10 ; d++){
+                    console.log(d); //error
+             }
+
+             console.log("d outside value = ",d)//d outside value =  10
+
+             const mum1 = 0;
+             let num2 = 0;
+             var num3 = 0;
+
+            //  for(num1 ; num1 < 10 ; num1++){
+            //     console.log(num1);//error
+            //  }
+
+             for(num2 ; num2 < 10 ; num2++){
+                console.log(num2);// 0 to 9
+             }
+             console.log("num2 outside value = ",num2);//num2 outside value =  10
+
+             for(num3 ; num3 < 10 ; num3++){
+                console.log(num2);// 0 to 9
+             }
+             console.log("num3 outside value = ",num3);//num3 outside value =  10
+
+
+            //  New Declaration
+            const mum4 = 1;
+             let num5 = 2;
+             var num6 = 3;
+
+            //  for(const num4 = 0 ; num4 < 10 ; num4++){
+            //     console.log(num4);// 0 >>> error
+            //  }
+
+
+             for(let num5=0 ; num5 < 10 ; num5++){
+                console.log(num5);// 0 to 9
+             }
+             console.log("num5 outside value = ",num5);//num5 outside value =  2
+
+             
+             
+             for(var num6=0 ; num6 < 10 ; num6++){
+                console.log(num6);// 0 to 9
+             }
+             console.log("num6 outside value = ",num6);//num6 outside value =  10
+
+// -------------------------------------------------------------------------------------------------
+
+            //  Object
+
+            const customer = {
+                fullname: "Thant Zin Myo",
+                age:27,
+                phone:"097797079"
+            };
+
+            console.log(customer);
+            console.log(customer.fullname);
+            console.log(customer.age);
+            console.log(customer.phone);
+
+            customer.city = "Mandalay";
+            console.log(customer);
+
+            customer.fullname = "MainMa chit tone lay";
+            console.log(customer);
+
+            // const  customer ={
+            //     citizen:"Myanmar"
+            // };
+            // console.log(customer);
+
+
+            let member = {
+                fullname: "Hnin Thadar Bo",
+                age:20,
+                phone:"09966185359"
+            };
+
+            console.log(member);
+            console.log(member.fullname,member.age,member.phone);
+
+            member.city = "Yangon";
+            console.log(member);
+
+            member.age = 23;
+            console.log(member);
+
+            member = {
+                citizen:"Myanmar"
+            };
+            console.log(member);
+
+          
+
+            var student = {
+                fullname: "Hnin Thadar Bo",
+                age:20,
+                phone:"09966185359"
+            };
+
+            console.log(student);
+            console.log(student.fullname,student.age,student.phone);
+
+           student.city = "Yangon";
+            console.log(student);
+
+            student.age = 23;
+            console.log(student);
+
+            student = {
+                citizen:"Myanmar"
+            };
+            console.log(student);
+            console.log(student.fullname,student.age,student.phone);//undefined undefined undefined
+
+// ------------------------------------------------------------------------------------------------------------------
+            
+            // Array
+
+            const arrcolors = ["red","green","blue"];
+            console.log(arrcolors);
+
+            arrcolors[0]="violet";
+            console.log(arrcolors);
+
+            arrcolors[3]="white";
+            console.log(arrcolors);
+
+            arrcolors.push("brown");
+            console.log(arrcolors);
+
+
+            //Error
+            // arrcolors = ["black","white"];
+            // console.log(arrcolors);
+
+            
+            
+            
+            let arrgirls = ["su su","yu yu","nu nu"];
+            console.log(arrgirls);
+
+            arrgirls[0]="pu";
+            console.log(arrgirls);
+
+            arrgirls[3]="gu";
+            console.log(arrgirls);
+
+            arrgirls.push("bu");
+            console.log(arrgirls);
+
+
+           
+            arrgirls = ["wu","ku"];
+            console.log(arrgirls);
+
+
+
+
+            var arrboys = ["ko","lo","mo"];
+            console.log(arrboys);
+
+            arrboys[0]="thar hla";
+            console.log(arrboys);
+
+            arrboys[3]="kyaw mya";
+            console.log(arrboys);
+
+            arrboys.push("bo bo");
+            console.log(arrboys);
+
+
+           
+            arrboys = ["thant","zin"];
+            console.log(arrboys);
+
+// ----------------------------------------------------
+
+            // Function Scope
+
+            const number1 = 10;
+            let number2 = 20;
+            var number3 = 30;
+
+            function funone(){
+                console.log(number1+number2+number3);
+            }
+
+            funone();//60
+
+            function funtwo(){
+                const x =10;
+                let y =20;
+                var z =30;
+                console.log(x+y+z);
+            }
+            funtwo();
+
+            console.log("Globel Scope variable number1 value = ",number1);//Globel Scope value =  10
+            console.log("Globel Scope variable number2 value = ",number2);//Globel Scope value =  20
+            console.log("Globel Scope variable number3 value = ",number3);//Globel Scope value =  30
+
+
+            // console.log("Globel Scope variable x value = ",x);//x is not defined
+            // console.log("Globel Scope variable y value = ",y);//y is not defined
+            // console.log("Globel Scope variable z value = ",z);//z is not defined
+
+
+
+            // Override
+
+            const p = 1;
+            let q = 2;
+            var r = 3;
+
+            function funthree(){
+                //p = 10 ;
+                q = 20;
+                r = 30;
+
+                console.log("From function , p value by const = ",p);//1
+                console.log("From function , q value by let = ",q);//20
+                console.log("From function , r value by var = ",r);//30
+            }
+
+            funthree();
+
+            console.log("From function , p value by const = ",p);//1
+            console.log("From function , q value by let = ",q);//20
+            console.log("From function , r value by var = ",r);//30
+
+
+             // New Declaration
+
+             const a = 1;
+            let b = 2;
+            var c = 3;
+
+            function funfour(){
+                x = 10 ;
+                y = 20;
+                z = 30;
+
+                console.log("From function , p value by const = ",x);//10
+                console.log("From function , q value by let = ",y);//20
+                console.log("From function , r value by var = ",z);//30
+            }
+
+            funfour();
+
+            console.log("From function , p value by const = ",a);//1
+            console.log("From function , q value by let = ",b);//2
+            console.log("From function , r value by var = ",c);//3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
+
+
+   
